@@ -428,7 +428,7 @@ xhprof:
     install: '0'
 wpcli:
     install: '1'
-    version: v0.19.0
+    version: v0.21.1
 drush:
     install: '0'
     version: 6.3.0

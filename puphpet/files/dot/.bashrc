@@ -273,3 +273,14 @@ alias gsts='git stash show --text'
 alias gts='git tag -s'
 
 alias gwch='git whatchanged -p --abbrev-commit --pretty=medium'
+
+# sync from: $1 to: $2
+function sync_down() 
+{
+rsync -avz dele@dele.webfactional.com:/home/dele/webapps/$1/shared/web/app/uploads/* /var/www/$2/web/app/uploads/
+}
+
+function sync_up() 
+{
+rsync -avz /var/www/$1/web/app/uploads/* dele@webfactional.com:/home/dele/webapps/$1/shared/web/app/uploads/
+}
