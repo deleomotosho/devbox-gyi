@@ -179,10 +179,19 @@ nginx:
             rewrite_to_https: '1'
             spdy: '1'
             locations:
-                nxvl_e41mdcsgdee4:
+                nxvl_936ddz3izg2n:
+                    location: /
+                    autoindex: 'off'
+                    try_files:
+                        - $uri
+                        - $uri/
+                        - /index.php$is_args$args
+                    fastcgi: ''
+                    fastcgi_index: ''
+                    fastcgi_split_path: ''
+                nxvl_655saaojh5mr:
                     location: '~ \.php$'
                     autoindex: 'off'
-                    internal: false
                     try_files:
                         - $uri
                         - $uri/
@@ -209,15 +218,29 @@ nginx:
             rewrite_to_https: '1'
             spdy: '1'
             locations:
-                nxvl_se0fp5m3ognf:
-                    location: '~ \.php$'
+                nxvl_r4r4fvfghgg:
+                    location: /
                     autoindex: 'off'
-                    internal: false
                     try_files:
                         - $uri
-                    fastcgi: '127.0.0.1:9000'
+                        - $uri/
+                        - /index.php$is_args$args
+                    fastcgi: ''
                     fastcgi_index: ''
                     fastcgi_split_path: ''
+                nxvl_ffrf567878i7jhj:
+                    location: '~ \.php$'
+                    autoindex: 'off'
+                    try_files:
+                        - $uri
+                        - $uri/
+                        - /index.php$is_args$args
+                    fastcgi: '127.0.0.1:9000'
+                    fastcgi_index: index.php
+                    fastcgi_split_path: '^(.+\.php)(/.*)$'
+                    fast_cgi_params_extra:
+                        - 'SCRIPT_FILENAME $request_filename'
+                        - 'APP_ENV dev'
         nxv_8oca7tqq4atr:
             server_name: do.local
             server_aliases:
@@ -234,13 +257,29 @@ nginx:
             rewrite_to_https: '1'
             spdy: '1'
             locations:
-                nxvl_zr07l8hc52lo:
-                    location: '~ \.php$'
+                nxvl_93dfrfg576:
+                    location: /
                     autoindex: 'off'
-                    internal: false
+                    try_files:
+                        - $uri
+                        - $uri/
+                        - /index.php$is_args$args
                     fastcgi: ''
                     fastcgi_index: ''
                     fastcgi_split_path: ''
+                nxvl_65ytgffrer354t:
+                    location: '~ \.php$'
+                    autoindex: 'off'
+                    try_files:
+                        - $uri
+                        - $uri/
+                        - /index.php$is_args$args
+                    fastcgi: '127.0.0.1:9000'
+                    fastcgi_index: index.php
+                    fastcgi_split_path: '^(.+\.php)(/.*)$'
+                    fast_cgi_params_extra:
+                        - 'SCRIPT_FILENAME $request_filename'
+                        - 'APP_ENV dev'
         nxv_76ydjdyh2356889:
             server_name: blog.local
             server_aliases:
@@ -257,13 +296,29 @@ nginx:
             rewrite_to_https: '1'
             spdy: '1'
             locations:
-                nxvl_zr07l44rrcalo:
-                    location: '~ \.php$'
+                nxvl_dfer456hgfg:
+                    location: /
                     autoindex: 'off'
-                    internal: false
+                    try_files:
+                        - $uri
+                        - $uri/
+                        - /index.php$is_args$args
                     fastcgi: ''
                     fastcgi_index: ''
                     fastcgi_split_path: ''
+                nxvl_cr568omgfdfrfgtr:
+                    location: '~ \.php$'
+                    autoindex: 'off'
+                    try_files:
+                        - $uri
+                        - $uri/
+                        - /index.php$is_args$args
+                    fastcgi: '127.0.0.1:9000'
+                    fastcgi_index: index.php
+                    fastcgi_split_path: '^(.+\.php)(/.*)$'
+                    fast_cgi_params_extra:
+                        - 'SCRIPT_FILENAME $request_filename'
+                        - 'APP_ENV dev'
     proxies: {  }
 apache:
     install: '0'
