@@ -282,5 +282,5 @@ rsync -avz dele@dele.webfactional.com:/home/dele/webapps/$1/shared/web/app/uploa
 
 function sync_up() 
 {
-rsync -avz /var/www/$1/web/app/uploads/* dele@webfactional.com:/home/dele/webapps/$1/shared/web/app/uploads/
+rsync -avz /var/www/$1/web/app/uploads/* dele@webfactional.com:/home/dele/webapps/$2/shared/web/app/uploads/
 }
