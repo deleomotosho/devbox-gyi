@@ -1,0 +1,15 @@
+authtoken: 6TczPBUBHjgcyCvmBt4VW_3cASJisfQoah77oP9iiV4
+log: /var/www/clean/storage/logs/ngrok.log
+tunnels:
+  charles:
+    proto: http
+    addr: clean.local:80
+    subdomain: charles-mingus
+  miles:
+    proto: http
+    addr: clean.local:80
+    subdomain: miles-davis
+  charlie:
+    proto: http
+    addr: clean.local:80
+    subdomain: charlie-packer

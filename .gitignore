@@ -1,0 +1,6 @@
+storage
+.vagrant
+*.DS_Store
+npm-debug.log
+puphpet/.DS_Store
+.installed
